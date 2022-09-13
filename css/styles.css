@@ -527,8 +527,6 @@ address .map-link {
 }
 
 .footer-form-container {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-left: auto;
 }
 
@@ -562,7 +560,6 @@ address .map-link {
   color: var(--primary-text-color-theme-dark);
   transform: border-color var(--transition-dur-and-func),
     box-shadow var(--transition-dur-and-func);
-  cursor: pointer;
 }
 
 .footer-form-input:focus {
@@ -638,7 +635,6 @@ address .map-link {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
   padding: 40px;
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -659,6 +655,14 @@ address .map-link {
   border-radius: 50%;
   background-color: var(--primary-background-color);
   padding: 0;
+  transition: fill var(--transition-dur-and-func),
+    border-color var(--transition-dur-and-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /*===============MODAL FORM===============*/
@@ -682,6 +686,7 @@ address .map-link {
 }
 
 .modal-form-label {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -699,9 +704,10 @@ address .map-link {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  font-size: 12px;
+  outline: none;
   padding-left: 42px;
   transition: border-color var(--transition-dur-and-func);
-  cursor: pointer;
 }
 
 .modal-form-input:focus {
@@ -726,8 +732,10 @@ address .map-link {
 .modal-form-comment {
   width: 100%;
   min-height: 120px;
+  font-size: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   padding: 12px 16px;
   resize: none;
   transition: border-color var(--transition-dur-and-func);
@@ -763,6 +771,14 @@ address .map-link {
   margin-right: 7px;
 }
 
+.modal-checkbox-off {
+  border-radius: 2px;
+  cursor: pointer;
+  transition: box-shadow var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func),
+    fill var(--transition-dur-and-func);
+}
+
 .modal-policy-check:checked + .modal-checkbox-off {
   background-color: var(--accent-color);
   fill: var(--accent-color);
@@ -772,15 +788,6 @@ address .map-link {
   fill: var(--accent-color);
 }
 
-.modal-checkbox-off {
-  border-radius: 2px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: box-shadow var(--transition-dur-and-func),
-    background-color var(--transition-dur-and-func),
-    fill var(--transition-dur-and-func);
-}
-
 .modal-checkbox-on {
   position: absolute;
   border-radius: 2px;
@@ -788,7 +795,7 @@ address .map-link {
   cursor: pointer;
 }
 
-.modal-polisy-link {
+.modal-policy-link {
   color: var(--accent-color);
 }
 
@@ -796,7 +803,7 @@ address .map-link {
   align-self: center;
   min-width: 200px;
   min-height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 52px;
   font-weight: 700;
